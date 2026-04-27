@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CyberAdvisorApplication.Pages.KBGrp.KnowledgeBasePg"
+             Title="Knowledge Base">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <VerticalStackLayout Spacing="6">
+                <Label Text="Knowledge Base"
+                       FontSize="28"
+                       FontAttributes="Bold" />
+                <Label Text="Review quick-reference cybersecurity topics." />
+                
+            </VerticalStackLayout>
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Networking"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Label Text="Basic networking security topics such as firewalls, Segmentations, and IDS/IPS systems." />
+                    <Button Text="Open Networking"
+                            Clicked="BtnNetworking_Clicked" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Identity and Access Management (IAM)"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Label Text="Identity and access management basics. Authentication, Authorization, Accounting." />
+                    <Button Text="Open IAM"
+                            Clicked="BtnIam_Clicked" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Device Mgmt and EDR"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Label Text= " Device policy control, monitoring, endpoint security." />
+                    <Button Text="Open Device Mgmt and EDR"
+                            Clicked="BtnEndpointSecurityMgmt_Clicked" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Common Vectors of Compromise"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Label Text="Common ways attackers gain access, such as phishing, weak passwords, and misconfigurations." />
+                    <Button Text="Open Common Vectors"
+                            Clicked="BtnVectors_Clicked" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Label Text="Content is adapted from NIST, CISA, Microsoft, and CIS resources" FontSize="Micro"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

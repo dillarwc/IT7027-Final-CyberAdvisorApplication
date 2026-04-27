@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CyberAdvisorApplication.Pages.WelcomePg"
+             Title="Welcome">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            
+            <VerticalStackLayout Spacing="8">
+                <Label Text="Welcome to CyberAdvisor"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" />
+
+                <Label Text="The Cyber Advisor application provides a quick reference Knowledge Base, CVE and Vulnerability advisories, and Incident Response support for IT professionals."
+                       HorizontalTextAlignment="Center" />
+            </VerticalStackLayout>
+         
+            
+            
+            
+            
+               
+            <!--<Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="About:"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Label Text="Cyber Advisor is designed to organize critical cybersecurity information into a single application. It provides reference material, vulnerability alerts, and interactive incident response content." />
+                </VerticalStackLayout>
+            </Frame>-->
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Advisories"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Label Text="This section contains information on the latest vulnerabilities  published by NIST. It contains information on both Common Vulnerabilities and Exposures (CVEs), Known Exploited Vulnerabilities (KEVs), and saved advisory items for further review." />
+                </VerticalStackLayout>
+            </Frame>
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Knowledge Base"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Label Text="The Knowledge Base includes valuable cybersecurity references on topics, such as networking, IAM, encryption, EDR, antivirus, and common vectors of compromise." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Incident Response"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Label Text="This section provides a quick interractive checklist on response procedures for common security events, including phishing, malware, account compromise, and network-related incidents." />
+                </VerticalStackLayout>
+            </Frame>
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="How to Use the App"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Label Text="Tap the flyout menu to browse the main areas of the application and open the specific topic or response page you want to review." />
+                </VerticalStackLayout>
+            </Frame>
+            
+            
+            
+            
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+    
+    
+    
+    <!--<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CyberAdvisorApplication.WelcomePg"
+             Title="Welcome">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Label Text="Welcome to the Cyber Advisor"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Your cybersecurity operations hub for advisories, quick-reference knowledge, and incident response guidance."
+                   HorizontalTextAlignment="Center" />
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="About This App"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Label Text="Cyber Advisor is designed to organize key cybersecurity reference material and workflows into one mobile application." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Advisories"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Label Text="View security advisory content including Known Exploited Vulnerabilities (KEVs), Common Vulnerabilities and Exposures (CVEs), and saved advisory items." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Knowledge Base"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Label Text="Review core cybersecurity topics such as networking, IAM, encryption, EDR, antivirus, and common vectors of compromise." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Incident Response"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Label Text="Access structured response guidance for phishing, malware, account compromise, and network-related incidents." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Using the App"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Label Text="Use the flyout menu to move between sections and open the specific pages you want to review." />
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>-->

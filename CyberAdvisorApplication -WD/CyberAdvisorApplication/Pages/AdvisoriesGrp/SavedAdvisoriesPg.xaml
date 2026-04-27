@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CyberAdvisorApplication.Pages.AdvisoriesGrp.SavedAdvisoriesPg"
+             Title="Saved Advisories">
+
+    <Grid RowDefinitions="Auto,*" Margin="0">
+
+        <Label Grid.Row="0"
+               Text="Saved Advisories"
+               FontSize="Title"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Padding="20" />
+
+        <CollectionView Grid.Row="1" Margin="5" x:Name="CvSavedAdvisories" SelectionMode="None">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Padding="5" Margin="5">
+                        <VerticalStackLayout Padding="10" Spacing="5">
+
+                            <Label Text="{Binding Id}" FontSize="Medium" />
+                            <Label Text="{Binding Description}" />
+                            <Label Text="{Binding PublishedDate}" />
+
+                            <Label Text="{Binding Url}" TextColor="Blue">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="UrlLabel_Tapped" />
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </Grid>
+</ContentPage>
+    
+    
+    
+    <!--<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CyberAdvisorApplication.Pages.AdvisoriesGrp.SavedAdvisoriesPg"
+             Title="Saved">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <VerticalStackLayout Spacing="6">
+                <Label Text="Security Advisories"
+                       FontSize="28"
+                       FontAttributes="Bold" />
+
+                <Label Text="Track vulnerabilities, exploits, and security advisories" />
+            </VerticalStackLayout>
+
+            <BoxView HeightRequest="1" />
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Saved Advisories"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+
+                    <Label Text="Your bookmarked vulnerabilities and advisories for quick reference." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <CollectionView x:Name="CvSavedAdvisories"
+                            SelectionMode="Single">
+                <CollectionView.EmptyView>
+                    <Frame Padding="20">
+                        <VerticalStackLayout Spacing="10">
+                            <Label Text="No saved advisories yet."
+                                   FontSize="18"
+                                   FontAttributes="Bold" />
+                            <Label Text="Bookmarked KEVs and CVEs will appear here." />
+                        </VerticalStackLayout>
+                    </Frame>
+                </CollectionView.EmptyView>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>-->

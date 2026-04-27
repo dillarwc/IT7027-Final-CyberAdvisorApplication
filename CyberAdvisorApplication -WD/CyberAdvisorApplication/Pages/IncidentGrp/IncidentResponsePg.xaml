@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CyberAdvisorApplication.Pages.IncidentGrp.IncidentResponsePg"
+             Title="Incident Response">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <VerticalStackLayout Spacing="6">
+                <Label Text="Incident Response"
+                       FontSize="28"
+                       FontAttributes="Bold" />
+                <Label Text="Open simple response guides for common security incidents." />
+            </VerticalStackLayout>
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Phishing"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Label Text="Steps for reviewing, containing, and documenting phishing incidents." />
+                    <Button Text="Open Phishing Response"
+                            Clicked="BtnPhishing_Clicked" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Malware"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Label Text="Steps for isolating devices and responding to suspected malware activity." />
+                    <Button Text="Open Malware Response"
+                            Clicked="BtnMalware_Clicked" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Account Compromise"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Label Text="Steps for handling compromised user accounts and unauthorized access." />
+                    <Button Text="Open Account Compromise Response"
+                            Clicked="BtnAccountCompromise_Clicked" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!--<Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Network"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Label Text="Steps for investigating suspicious network activity and possible network incidents." />
+                    <Button Text="Open Network Response"
+                            Clicked="BtnNetwork_Clicked" />
+                </VerticalStackLayout>
+            </Frame>-->
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

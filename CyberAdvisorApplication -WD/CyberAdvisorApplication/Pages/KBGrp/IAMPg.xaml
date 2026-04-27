@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CyberAdvisorApplication.Pages.KBGrp.IAMPg"
+             Title="IAM">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <VerticalStackLayout Spacing="8">
+                <Label Text="Identity and Access Management"
+                       FontSize="28"
+                       FontAttributes="Bold" />
+
+                <Label Text="Identity and Access Management, or IAM, is the practice of managing digital identities and controlling access to systems, applications, and data.
+                &#10; &#10;IAM is often explained using the acronym AAA: Authentication, Authorization, and Accounting. "/>
+          
+                </VerticalStackLayout>
+
+            <Frame x:Name="AuthenticationSection" Padding="15" IsVisible="True">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Authentication"
+                           FontSize="22"
+                           FontAttributes="Bold" />
+
+                    <Label Text="Authentication is the process of proving that a user, device, or service account is who it claims to be. Common authentication methods include passwords, passkeys, certificates, security keys, biometrics, and multi-factor authentication." />
+
+                    <Label Text="Passwords alone are weak because they can be guessed, reused, stolen, or phished. Multi-factor authentication reduces risk by requiring an additional proof beyond just the password." />
+
+                    <Label Text="Strong authentication is especially important for email, VPN, cloud apps, administrative accounts, and any system that contains sensitive data." />
+
+                    <Label Text="Key Points"
+                           FontAttributes="Bold" />
+
+                    <Label Text="• Authentication answers: “Who are you?”&#10;• MFA makes stolen passwords less useful to attackers.
+                           &#10;• Admin accounts should use stronger authentication methods than standard accounts.&#10;• Authentication logs are important for detecting suspicious access." />
+
+                    <Label Text="Recommended Actions / Settings"
+                           FontAttributes="Bold" />
+
+                    <Label Text="• Require MFA for all users when possible.&#10;• Require stronger MFA for administrators and high-risk users.
+                           &#10;• Disable legacy authentication methods that do not support MFA.&#10;• Encourage unique passwords and password manager use, jsuch as LastPass or KeePass.
+                           &#10;• Monitor failed sign-ins, impossible travel, and unfamiliar login locations.&#10;• Prefer phishing-resistant authentication for highly privileged accounts when available." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame x:Name="AuthorizationSection" Padding="15" IsVisible="False">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Authorization" FontSize="22" FontAttributes="Bold" />
+
+                    <Label Text="Authorization controls what an authenticated user, device, or service is allowed to do. After a user signs in, authorization decides what files, apps, systems, or admin functions they can access." />
+                <Label Text="Good authorization follows the principle of least privilege. Users should only receive the access they need to do their job, and access should be reviewed regularly." />
+
+                    
+                    
+                    <Label Text="Privileged Access Management, or PAM, is a stricter form of authorization focused on administrator and high-risk accounts. Privileged accounts should have stronger authentication, limited assignment, extra monitoring, and access only when needed." />
+
+                    <Label Text="Key Points" FontAttributes="Bold" />
+
+                    <Label Text="• Authorization answers: “What are you allowed to do?”&#10;• Access should be based on job role and business need.&#10;• Permissions should be reviewed and removed when no longer needed.&#10;• Least privilege reduces the impact of account compromise.&#10;• PAM protects powerful accounts such as global admins, local admins, and service accounts." />
+                    <Label Text="Recommended Actions / Settings"
+                           FontAttributes="Bold" />
+                    <Label Text="• Assign access based on job role and business need.&#10;• Remove access when users change roles or leave the organization.
+                           &#10;• Review group membership and permissions regularly.&#10;• Avoid giving users local admin rights.
+                           &#10;• Use separate admin accounts for administrative work.&#10;• Limit the number of global administrators or high level admins.
+                           &#10;• Use 'just-in-time' or temporary 'approval-based' admin access if available." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame x:Name="PamSection" Padding="15" IsVisible="False">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Accounting"
+                           FontSize="22"
+                           FontAttributes="Bold" />
+
+                    <Label Text="Accounting is the process of recording and reviewing activity. In IAM, accounting usually means logs and audit records that show who signed in, what they accessed, what changes they made, and whether access attempts succeeded or failed." />
+                    <Label Text="Accounting is important because security staff needs logs and evidence to detect suspicious behavior, investigate incidents, and understand what happened after an account compromise." />
+
+                    <Label Text="Examples include sign-in logs, audit logs, admin activity logs, file access logs, and alerts for risky behavior." />
+
+                    <Label Text="Key Points"
+                           FontAttributes="Bold" />
+                    <Label Text="• Accounting answers: “What happened?”&#10;• Logs help detect suspicious access and investigate incidents.
+                           
+                           &#10;• Failed sign-ins, unfamiliar locations, and unusual admin actions should be reviewed.&#10;• Accounting supports auditing, compliance, and incident response." />
+
+                    <Label Text="Recommended Actions / Settings"
+                           FontAttributes="Bold" />
+
+                    <Label Text="• Enable sign-in logging and audit logging where available.&#10;• Review failed login attempts and risky sign-in events.
+                           &#10;• Monitor privileged account activity.&#10;• Keep logs long enough to support investigations or meet compliance regs.
+                           &#10;• Configure alerts for unusual admin changes, suspicious mailbox rules, and impossible travel.
+                           &#10;•  Review access logs in the events ofa suspected account compromise.&#10;• Make sure important logs are stored in multiple locations or separate environments" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Grid ColumnDefinitions="*,*,*" ColumnSpacing="8">
+                <Button Grid.Column="0" Padding="0,9" Text="Authentication"  Clicked="BtnAuthentication_Clicked" />
+
+                <Button Grid.Column="1" Text="Authorization" Padding="0" Clicked="BtnAuthorization_Clicked" />
+
+                <Button Grid.Column="2" Text="Accounting" Clicked="BtnPam_Clicked" Padding="0"/>
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

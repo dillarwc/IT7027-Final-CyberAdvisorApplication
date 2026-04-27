@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CyberAdvisorApplication.Pages.IncidentGrp.AccountCompromisePg"
+             Title="Account Compromise">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <VerticalStackLayout Spacing="6">
+                <Label Text="Account Compromise Response"
+                       FontSize="28"
+                       FontAttributes="Bold" />
+
+                <Label Text="Adapted from Microsoft's 'Compromised Cloud Email Account' and 'IR Playbooks'"
+                       FontSize="12"/>
+                <!--FontAttributes="Italic"--> 
+                       
+
+                <Label Text="Steps to respond to compromised user accounts and unauthorized access incidents." />
+            </VerticalStackLayout>
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Checklist Status"
+                           FontAttributes="Bold" />
+
+                    <Label x:Name="LblCompletionStatus"
+                           Text="Checklist not completed yet." />
+
+                    <Button Text="Check Completion"
+                            Clicked="BtnCheckCompletion_Clicked" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep1" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="1. Confirm suspicious account activity" FontAttributes="Bold" />
+                        <Label Text="Review sign-ins, locations, devices, user reports, mailbox activity, and alerts." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep2" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="2. Determine whether the activity is unauthorized" FontAttributes="Bold" />
+                        <Label Text="Verify suspicious activity with the legitimate user when possible." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep3" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="3. Assess account privileges and access" FontAttributes="Bold" />
+                        <Label Text="Identify what systems, mailboxes, files, groups, and admin roles the account could access." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep4" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="4. Review recent account activity" FontAttributes="Bold" />
+                        <Label Text="Check sign-ins, email activity, file access, sharing activity, and administrative changes." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep5" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="5. Disable or lock the affected account" FontAttributes="Bold" />
+                        <Label Text="Temporarily disable the account to prevent continued unauthorized access while the investigation continues." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep6" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="6. Revoke active sessions" FontAttributes="Bold" />
+                        <Label Text="Invalidate active tokens or sessions so the attacker cannot continue using stolen access." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep7" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="7. Reset credentials" FontAttributes="Bold" />
+                        <Label Text="Reset the password using a strong, unique password." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep8" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="8. Verify or re-register MFA" FontAttributes="Bold" />
+                        <Label Text="Review MFA methods and remove suspicious devices, phone numbers, or authentication methods." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep9" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="9. Review and remove suspicious app consent grants" FontAttributes="Bold" />
+                        <Label Text="Remove unauthorized applications that the attacker may have approved." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep10" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="10. Review administrative roles and permissions" FontAttributes="Bold" />
+                        <Label Text="Remove any unauthorized or unnecessary roles assigned to the user." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep11" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="11. Review mailbox forwarding and inbox rules" FontAttributes="Bold" />
+                        <Label Text="Remove suspicious forwarding rules, inbox rules, hidden rules, or delegated access." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep12" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="12. Check for data access or exfiltration" FontAttributes="Bold" />
+                        <Label Text="Review downloads, external sharing, mailbox access, sent mail, and large transfers." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep13" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="13. Restore legitimate access" FontAttributes="Bold" />
+                        <Label Text="Re-enable the user only after credentials, MFA, sessions, forwarding rules, and app grants are secured." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep14" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="14. Monitor for re-compromise" FontAttributes="Bold" />
+                        <Label Text="Watch for new suspicious sign-ins, MFA changes, forwarding rules, risky user alerts, or unusual access." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep15" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="15. Document the incident" FontAttributes="Bold" />
+                        <Label Text="Record timeline, suspected cause, actions taken, affected data, and prevention steps." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

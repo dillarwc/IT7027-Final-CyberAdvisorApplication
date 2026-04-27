@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CyberAdvisorApplication.Pages.KBGrp.VectorsPg"
+             Title="Common Vectors">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <VerticalStackLayout Spacing="6">
+                <Label Text="Common Vectors of Compromise"
+                       FontSize="28"
+                       FontAttributes="Bold" />
+
+  
+
+                <Label Text="Quick reference material for common ways attackers gain access." />
+            </VerticalStackLayout>
+
+            <Frame x:Name="PhishingSection" Padding="15" IsVisible="True">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Phishing"
+                           FontSize="22"
+                           FontAttributes="Bold" />
+
+                    <Label Text="Phishing is a social engineering attack where an attacker tries to trick a person into clicking a link, opening an attachment, scanning a QR code, sending money, or entering credentials into a fake login page." />
+
+                    <Label Text="Phishing messages often create urgency. They may claim that an account will be closed, a payment failed, a package is delayed, or a document needs immediate review." />
+
+                    <Label Text="Phishing is dangerous because it can lead to credential theft, malware infection, business email compromise, and unauthorized access to cloud accounts." />
+
+                    <Label Text="Key Points"
+                           FontAttributes="Bold" />
+
+                    <Label Text="• Be suspicious of urgent requests, unexpected attachments, unusual links, or any message that requires you to take action.&#10;• Verify the sender using a trusted method before taking any action.
+                           &#10;• Report suspicious messages instead of just deleting or ignoring them.&#10;• Do not enter credentials after clicking an unexpected link." />
+
+                    <Label Text="Recommended Actions / Settings"
+                           FontAttributes="Bold" />
+
+                    <Label Text="• Use MFA to reduce the impact of stolen passwords.&#10;• Enable phishing-resistant MFA for administrators if available.&#10;• Train users to report suspicious emails.
+                           &#10;• Configure email filtering for malicious links, attachments, and spoofed senders.&#10;• Use external sender warnings on all but trusted external senders.
+                           &#10;• Review and block repeated phishing senders, domains, and URLs.&#10;• Disable automatic forwarding to external addresses unless there is a specific business need." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame x:Name="DownloadsSection" Padding="15" IsVisible="False">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Malicious Downloads" FontSize="22" FontAttributes="Bold" />
+
+                    <Label Text="A malicious download occurs when a user downloads or runs software, scripts, documents, browser extensions, or files that contain malicious code. These downloads may come from phishing emails, fake update prompts, unsafe websites, pirated software, or real but compromised sites." />
+
+                    <Label Text="Malicious downloads can install malware, steal information, encrypt files, create 'persistence', or give an attacker remote access to the device." />
+                    <Label Text="Reducing this risk requires safe browsing habits, application control, endpoint protection, patching, and user training." />
+
+                    <Label Text="Key Points" FontAttributes="Bold" />
+
+                    <Label Text="• Download software only from trusted sources.&#10;• Avoid pirated software, unknown installers, and fake update popups.&#10;• Be careful with macros, scripts, or any compressed files
+                           .&#10;• Endpoint protection can help block or detect suspicious downloads." />
+
+                    <Label Text="Recommended Actions / Settings"
+                           FontAttributes="Bold" />
+
+                    <Label Text="• Allow software downloads only from trusted sources.&#10;• Block or restrict unknown scripts, macros, and executable attachments.&#10;• Use application control or allow-listing where possible.&#10;• Keep all browsers, plugins, software, and  document readers updated.
+                           &#10;• Warn users about fake update prompts and pirated software.&#10;• Use endpoint protection to scan downloaded files.&#10;• Restrict users from installing software unless preapproved for their role." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame x:Name="CredentialTheftSection" Padding="15" IsVisible="False">
+                <VerticalStackLayout Spacing="12">  
+                    <Label Text="Credential Theft"
+                           FontSize="22" FontAttributes= "Bold" />
+
+                    <Label Text="Credential theft happens when attackers steal usernames, passwords, session tokens, MFA prompts, API keys, or other secrets used to access systems." />
+
+                    
+                    <Label Text="Attackers may steal credentials through phishing, malware, fake login pages, password reuse, insecure storage, credential stuffing, or compromised devices." />
+
+                    <Label Text="Credential theft is dangerous because attackers may look like legitimate users after signing in. Strong authentication, MFA, password managers, conditional access, monitoring, and least privilege policies can all reduce the damage." />
+
+                    <Label Text="Key Points"
+                           FontAttributes="Bold" />
+
+                    <Label Text="• Use unique passwords for different accounts.&#10;• Use MFA wherever possible.&#10;• Be cautious of unexpected login pages and MFA prompts.&#10;• Review sign-in logs for unusual locations, devices, or times." />
+
+                    <Label Text="Recommended Actions / Settings"
+                           FontAttributes="Bold" />
+
+                    <Label Text="• Require MFA for all important accounts.&#10;• Use unique passwords for every service.&#10;• Encourage password manager use for all users.
+                             &#10;• Monitor suspicious sign-ins and repeated failed login attempts.&#10;• Disable legacy authentication.
+                           &#10;• Review OAuth app consent and remove suspicious applications.&#10;• Revoke sessions after suspected account compromise.&#10;• Teach users not to approve unexpected MFA prompts." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame x:Name="ExploitationSection" Padding="15" IsVisible="False">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Exploitation"
+                           FontSize="22"
+                           FontAttributes="Bold" />
+
+                    <Label Text="Exploitation is a broad term and referrs to any time an attacker takes advantage of a vulnerability or misconfiguration to gain access, run code, escalate privileges, or bypass security controls." />
+                    <Label Text="Exploits may target operating systems, browsers, newtork appliances, firewalls, servers, cloud services, applications, or management tools. Internet-facing systems are especially important because attackers can reach them directly." />
+
+                    <Label Text="Organizations reduce exploitation risk by patching quickly, removing unsupported software, hardening configurations, limiting exposed services, monitoring alerts, and prioritizing known exploited vulnerabilities." />
+
+                    <Label Text="Key Points"  FontAttributes="Bold" />
+
+                    <Label Text="• Vulnerabilities become more dangerous when exposed to the internet.&#10;• Known exploited vulnerabilities should be prioritized.
+                           &#10;• Patching on devices and software should be verified after deployment.&#10;• Secure configuration matters as much as installing updates." />
+
+                    <Label Text="Recommended Actions + Settings"
+                           FontAttributes="Bold" />
+
+                    <Label Text="• Patch known exploited vulnerabilities as a priority.&#10;• Reduce internet exposure for services and devices that do not need to be accessed externall.
+                           &#10;• Remove unsupported software and operating systems.&#10;• Harden configurations instead of relying on default settings.&#10;• Restrict access to admin portals and management interfaces.
+                           &#10;• Monitor public-facing systems closely.&#10;• Use vulnerability scanning to find missing patches and misconfigurations.&#10;• Verify that remediation actually applied and works  after patching or configuration changes." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" ColumnSpacing="8" RowSpacing="8">
+                <Button Grid.Row="0" Grid.Column="0" Text="Phishing"  Clicked="BtnPhishing_Clicked" />
+
+                <Button Grid.Row="0"  Grid.Column="1"  Text="Downloads"  Clicked="BtnDownloads_Clicked" />
+
+                <Button Grid.Row="1" Grid.Column="0"  Text="Credentials"  Clicked="BtnCredentialTheft_Clicked" />
+
+                <Button Grid.Row="1"    Grid.Column="1" Text="Exploitation"  Clicked="BtnExploitation_Clicked" />
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

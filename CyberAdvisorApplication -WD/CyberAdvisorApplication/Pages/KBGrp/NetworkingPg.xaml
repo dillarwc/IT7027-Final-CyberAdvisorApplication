@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CyberAdvisorApplication.Pages.KBGrp.NetworkingPg"
+             Title="Networking">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <VerticalStackLayout Spacing="6">
+                <Label Text="Networking"
+                       FontSize="28"
+                       FontAttributes="Bold" />
+
+                <!--<Label Text=""
+                       FontSize="12"
+                       FontAttributes="Italic" />-->
+
+                <Label Text="Quick reference material for common networking security topics." />
+            </VerticalStackLayout>
+
+            <Frame x:Name="FirewallsSection" Padding="15" IsVisible="True">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Firewalls"
+                           FontSize="22"
+                           FontAttributes="Bold" />
+
+                    <Label Text="A firewall is a security control that filters network traffic based on rules. Firewalls are commonly used to separate trusted and untrusted networks, limit unnecessary access, and reduce exposure to attacks." />
+                <Label Text="Firewalls should not be relied on as the only layer of defense. They work best when combined with strict configurations, network segmentation, monitoring, strong IAM controls, and regular reviews of firewall rules." />
+
+                    <Label Text="Good firewall management includes allowing only needed traffic, blocking risky inbound connections, documenting rules, removing old rules that are no longer needed, and reviewing logs for suspicious activity." />
+
+                    <Label Text="Key Points"
+                           FontAttributes="Bold" />
+
+                    <Label Text="• Firewalls help control what traffic is allowed in or out.
+                           &#10;• Rules should follow least-privilege thinking: allow only what is needed
+                            .&#10;• Old configurations or overly broad rules can create security gaps.
+                           &#10;• Firewall logs can help detect scanning, blocked attacks, or unusual traffic." />
+
+                    <Label Text="Recommended Actions / Settings"
+                           FontAttributes="Bold" />
+
+                    <Label Text="• Use default-deny rules  for inbound traffic whenever possible.
+                           &#10;• Allow only required ports, protocols, and source IP addresses.
+                     &#10;• Remove old firewall rules that are no longer needed.&#10;• Log blocked and allowed traffic for important systems.
+                           &#10;• Review firewall rules on a regular schedule.&#10;• Avoid exposing management ports like RDP, SSH, or admin web portals directly to the internet." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame x:Name="SegmentationSection" Padding="15" IsVisible="False">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Network Segmentation"
+                           FontSize="22"
+                           FontAttributes="Bold" />
+
+                    <Label Text="Network segmentation divides a network into smaller zones or groups. The goal is to limit how far an attacker can move if one device, account, or application is compromised." />
+
+                    <Label Text="For example, guest Wi-Fi, servers, employee devices, printers, etc should be on separate segments and should not all have the same level of access. Sensitive systems should be separated and protected with stricter rules." />
+
+                    <Label Text="Segmentation is supported by Zero Trust principles. Do not automatically trust traffic just because it is inside the network. Access should be limited based on need, identity, device compliance, and sensitivity of the resources." />
+
+                    <Label Text="Key Points"
+                           FontAttributes="Bold" />
+
+                    <Label Text="• Segmentation can reduce the 'impact radius of an attack.
+                           &#10;• Guest networks should be separated from internal newtorks and systems.
+                           &#10;• Critical servers and admin devices should be more restrictive than normal user devices.&#10;• Segmentation works best when combined with monitoring traffic and managinf access controls." />
+
+                    <Label Text="Recommended Actions / Settings"
+                           FontAttributes="Bold" />
+
+                    <Label Text="• Separate guest Wi-Fi networks from internal systems.&#10;• Place servers, workstations, printers, and management systems into separate network segments when possible.
+                           &#10;• Restrict access to sensitive systems to only those who need it.&#10;• Limit lateral communication where possible.
+                           &#10;• Use VLANs, firewall rules, and managed switches to enforce separation.
+                           &#10;• Give administrative tools and configuration interfaces extra protection." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame x:Name="IdsIpsSection" Padding="15" IsVisible="False">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="IDS / IPS"
+                           FontSize="22"
+                           FontAttributes="Bold" />
+
+                    <Label Text="An Intrusion Detection System, or IDS, monitors network or system activity and sends alerts when suspicious activity is detected. An Intrusion Prevention System, or IPS, can detect suspicios activity and also take action to block or prevent certain suspicious activity." />
+
+                    <Label Text="IDS and IPS tools are part of detection and monitoring. They can help identify scanning, exploitation attempts, suspicious traffic, malware communication, or data exfiltration." />
+
+                    <Label Text="These tools are useful, but require 'tuning' and configuration. Strict rules may produce false alerts can cause 'alert fatigue', while permissive rules can miss important activity." />
+                    <Label Text="Note: Maintaining and IDS or IPS is time intensive and it may be worth purchasing services from a vendor that maintains and updates signatures"/>
+
+                    <Label Text="Key Points"
+                           FontAttributes="Bold" />
+
+                    <Label Text="• IDS detects suspicious activity and alerts.&#10;• IPS can block or prevent suspicious activity.&#10;• Alerts and rules should be reviewed and tuned over time.
+                           &#10;• IDS/IPS should be combined with other tools, such as firewall logs, endpoint alerts, and identity logs." />
+
+                    <Label Text="Recommended Actions / Settings"
+                           FontAttributes="Bold" />
+
+                    <Label Text="• Enable built-in IDS/IPS features on firewalls or other network appliances if available.
+                           &#10;• Review alerts regularly.&#10;• 'Tune' noisy alerts so important warnings are easier to notice.
+                     &#10;• Prioritize alerts involving servers, admin systems, authentication events, and public-facing services.
+                            &#10;• Combine IDS/IPS alerts with firewall, endpoint, and IAM logs.&#10;• Keep IDS/IPS rules updated with malware signatures from CVEs and KEVs.
+                           &#10; •Maintaining and IDS/IPS is time intensive. It may be worth purchasing services from a vendor that maintains and updates signatures" />
+                
+                </VerticalStackLayout>
+            </Frame>
+
+            <Grid ColumnDefinitions="*,*,*" ColumnSpacing="8">
+                <Button Grid.Column="0" Text="Firewalls" Clicked="BtnFirewalls_Clicked" />
+
+                <Button Grid.Column="1" Text="Segmentation" FontSize="Micro"  Clicked="BtnSegmentation_Clicked" />
+                <Button Grid.Column="2" Text="IDS / IPS"  Clicked="BtnIdsIps_Clicked" />
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

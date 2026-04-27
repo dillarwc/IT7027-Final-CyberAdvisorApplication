@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CyberAdvisorApplication.Pages.IncidentGrp.PhishingResponsePg"
+             Title="Phishing">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <VerticalStackLayout Spacing="6">
+                <Label Text="Phishing Response"
+                       FontSize="28"
+                       FontAttributes="Bold" />
+
+                <Label Text="Adapted from Microsoft's 'Phishing IR Playbook' and CISA's 'Federal IR Playbook'"
+                       FontSize="12"/>
+                <!--FontAttributes="Italic"-->
+
+                <Label Text="Response procedures for suspected or confirmed phishing attacks targeting users." />
+            </VerticalStackLayout>
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Checklist Status"
+                           FontAttributes="Bold" />
+                    
+
+                    <Label x:Name="LblCompletionStatus" Text="Checklist not completed yet." />
+
+                    <Button Text="Check Completion" Clicked="BtnCheckCompletion_Clicked" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+
+                    <CheckBox x:Name="ChkStep1" Grid.Column="0" />
+
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="1. Review the reported phishing email" FontAttributes="Bold" />
+                        <Label Text="Confirm the sender, subject, body, links, attachments, and date/time received." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep2" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="2. Preserve the original message" FontAttributes="Bold" />
+                        <Label Text="Keep the original email available for investigation instead of deleting it immediately." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep3" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="3. Identify all recipients" FontAttributes="Bold" />
+                        <Label Text="Use message trace or email search tools to find who received the same or similar message." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep4" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="4. Check whether users interacted with it" FontAttributes="Bold" />
+                        <Label Text="Determine whether users opened the email, clicked links, downloaded attachments, or submitted credentials." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep5" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="5. Analyze headers and authentication results" FontAttributes="Bold" />
+                        <Label Text="Review message headers, source IPs, SPF, DKIM, DMARC, return path, and sender details." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep6" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="6. Search for and remove the phishing email" FontAttributes="Bold" />
+                        <Label Text="Remove the message from affected mailboxes if your email security tools support it." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep7" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="7. Block malicious indicators" FontAttributes="Bold" />
+                        <Label Text="Block malicious senders, domains, URLs, attachment hashes, and IP addresses." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep8" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="8. Protect potentially affected accounts" FontAttributes="Bold" />
+                        <Label Text="Reset passwords, revoke sessions, and verify MFA for users who clicked links or entered credentials." />
+                    </VerticalStackLayout>
+                </Grid>
+                
+                
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep9" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="9. Check for mailbox or account persistence" FontAttributes="Bold" />
+                        <Label Text="Look for forwarding rules, delegated access, suspicious inbox rules, OAuth grants, or unusual mailbox changes." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep10" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="10. Remove malicious rules or unauthorized access" FontAttributes="Bold" />
+                        <Label Text="Delete suspicious forwarding rules, revoke unauthorized apps, and remove attacker-created persistence." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep11" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="11. Notify affected users" FontAttributes="Bold" />
+                        <Label Text="Warn recipients, explain what happened, and give clear instructions." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+            <Frame Padding="15">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                    <CheckBox x:Name="ChkStep12" Grid.Column="0" />
+                    <VerticalStackLayout Grid.Column="1" Spacing="6">
+                        <Label Text="12. Monitor and document the incident" FontAttributes="Bold" />
+                        <Label Text="Watch for follow-up attacks, suspicious sign-ins, new forwarding rules, or related alerts. Record the timeline, affected users, indicators, actions taken, impact, and lessons learned." />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

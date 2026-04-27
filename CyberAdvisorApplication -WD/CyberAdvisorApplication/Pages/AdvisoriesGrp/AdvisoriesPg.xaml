@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CyberAdvisorApplication.Pages.AdvisoriesGrp.AdvisoriesPg"
+             Title="Advisories">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <VerticalStackLayout Spacing="6">
+                <Label Text="Advisories"
+                       FontSize="28"
+                       FontAttributes="Bold" />
+                <Label Text="Vulneravility Advisories provided by NIST" />
+            </VerticalStackLayout>
+
+            
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Common Vulnerabilities and Exposures (CVEs)"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Label Text="Standardized vulnerability records used to identify and track security flaws." />
+                    <Button Text="Open CVEs"
+                            Clicked="BtnCves_Clicked" />
+                </VerticalStackLayout>
+            </Frame>
+
+
+
+
+
+
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Known Exploited Vulnerabilities (KEVs)"
+               FontSize="20"
+               FontAttributes="Bold" />
+                    <Label Text="Vulnerabilities known to be actively exploited in real-world attacks." />
+                    <Button Text="Open KEVs"
+                Clicked="BtnKEVs_Clicked" />
+                </VerticalStackLayout>
+            </Frame>
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Saved Advisories"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Label Text="Store advisories you want to revisit later." />
+                    <Button Text="Open Saved Advisories"
+                            Clicked="BtnSaved_Clicked" />
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

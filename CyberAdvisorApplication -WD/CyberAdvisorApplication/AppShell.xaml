@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="CyberAdvisorApplication.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:CyberAdvisorApplication.Pages"
+    xmlns:adv="clr-namespace:CyberAdvisorApplication.Pages.AdvisoriesGrp"
+    xmlns:inc="clr-namespace:CyberAdvisorApplication.Pages.IncidentGrp"
+    xmlns:kb="clr-namespace:CyberAdvisorApplication.Pages.KBGrp"
+     Shell.BackgroundColor="{AppThemeBinding Light=Red, Dark=#2F2F2F}"
+    Title="Cyber Advisor">
+
+    <ShellContent
+        Title="Welcome"
+        ContentTemplate="{DataTemplate pages:WelcomePg}"
+        Route="WelcomePg" />
+
+    <ShellContent
+        Title="Advisories"
+        ContentTemplate="{DataTemplate adv:AdvisoriesPg}"
+        Route="AdvisoriesPg" />
+
+    <ShellContent
+        Title="Knowledge Base"
+        ContentTemplate="{DataTemplate kb:KnowledgeBasePg}"
+        Route="KnowledgeBasePg" />
+
+    <ShellContent
+        Title="Incident Response"
+        ContentTemplate="{DataTemplate inc:IncidentResponsePg}"
+        Route="IncidentResponsePg" />
+
+    <ShellContent
+        Title="Settings"
+        ContentTemplate="{DataTemplate pages:SettingsPg}"
+        Route="SettingsPg" />
+
+</Shell>

@@ -1,0 +1,38 @@
+namespace CyberAdvisorApplication.Pages.IncidentGrp;
+
+public partial class AccountCompromisePg : ContentPage
+{
+    public AccountCompromisePg()
+    {
+
+        InitializeComponent();
+    }
+
+    private void BtnCheckCompletion_Clicked(object sender, EventArgs e)
+    {
+        bool checklistComplete =
+            ChkStep1.IsChecked &&
+            ChkStep2.IsChecked &&
+            ChkStep3.IsChecked &&
+            ChkStep4.IsChecked &&
+            ChkStep5.IsChecked &&
+            ChkStep6.IsChecked &&
+            ChkStep7.IsChecked &&
+            ChkStep8.IsChecked &&   ChkStep9.IsChecked &&
+            ChkStep10.IsChecked &&
+            ChkStep11.IsChecked && 
+            ChkStep12.IsChecked &&
+            ChkStep13.IsChecked &&
+            ChkStep14.IsChecked && ChkStep15.IsChecked;
+
+        if (checklistComplete)
+        {
+            LblCompletionStatus.Text = "Checklist complete.";
+        }
+
+
+        else
+        {
+            LblCompletionStatus.Text = "Checklist not completed yet.";}
+    }
+}

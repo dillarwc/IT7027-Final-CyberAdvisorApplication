@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CyberAdvisorApplication.Pages.KBGrp.EndpointSecurityMgmtPg"
+             Title="Endpoint Security">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <VerticalStackLayout Spacing="6">
+                <Label Text="Endpoint Security and Management"
+                       FontSize="28"
+                       FontAttributes="Bold" />
+
+                
+                
+                
+                
+
+                <Label Text="Quick reference material for device management, vulnerability management, and endpoint protection." />
+            </VerticalStackLayout>
+
+            <Frame x:Name="MdmSection" Padding="15" IsVisible="True">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Mobile Device Management"
+                           FontSize="22"
+                           FontAttributes="Bold" />
+
+                    <Label Text="Mobile Device Management, or MDM, is used to manage and secure devices such as laptops, phones, and tablets. In cloud managed environments, MDM can apply settings, enforce security baselines, require encryption, manage updates, and check whether ir not devices are in compliance." />
+                    <Label Text="MDM is important because users access company resources from many locations and device types. Devices should not automatically be trusted just because a known user is signed in." />
+
+                    <Label Text="Common MDM controls include requiring screen lock, enabling BitLocker or disk encryption, managing operating system updates, changing risky settings, deploying certificates, and using compliance policies with Conditional Access." />
+
+                    
+                    <Label Text="Key Points"  FontAttributes="Bold" />
+                    <Label Text="• MDM helps enforce security settings on company devices.&#10;• Compliance policies can help decide whether a device is allowed to access resources.
+                           &#10;• Security baselines give a recommended starting point for device hardening.&#10;• MDM is especially useful when devices are not joined to an on-prem domain." />
+
+                    <Label Text="Recommended Actions / Settings"
+                           FontAttributes="Bold" />
+
+                    <Label Text="• Require device encryption such as BitLocker or FileVault.&#10;• Require a screen lock or password on managed devices.&#10;• Use compliance policies to block risky or unmanaged devices from accessing company resources.
+                           &#10;• Apply security baselines as a starting point for device hardening.&#10;• Manage operating system updates through policies.&#10;• Provide or restrict access to certain applications on managed devices. 
+                           &#10;• Deploy required certificates, Wi-Fi profiles, VPN profiles, and security settings through MDM.&#10;• Use remote actions such as wipe, retire, or lock when a device is lost or compromised." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame x:Name="VulnMgmtSection" Padding="15" IsVisible="False">
+                <VerticalStackLayout Spacing="12">            <Label Text="Vulnerability Management" FontSize="22 " FontAttributes="Bold" />
+
+                    <Label Text="Vulnerability management is the process of identifying, prioritizing, and fixing security weaknesses in systems and software. This includes missing patches, insecure configurations, outdated software, exposed services, and known exploited vulnerabilities." />
+
+                    <Label Text="Not every vulnerability has the same risk. A good process prioritizes vulnerabilities based on severity, exposure, business impact, and whether attackers are actively exploiting the issue." />
+                    <Label Text="The CISA Known Exploited Vulnerabilities catalog is especially useful because it identifies vulnerabilities that are known to be exploited in real attacks. These should receive urgent attention." />
+
+                    <Label Text="Key Points"  FontAttributes="Bold" />
+
+                    <Label Text="• Vulnerability management is an ongoing process, not one-time setup.&#10;• Internet-facing systems and critical assets should be prioritized.
+                           &#10;• Known exploited vulnerabilities, (KEVS) should be treated as urgent.&#10;• Patching should be verified routinely after deployment." />
+
+                    <Label Text="Recommended Actions / Settings" FontAttributes="Bold" />
+                    <Label Text="• Maintain an inventory of devices, operating systems, and installed software.     
+                           
+                           &#10;• Prioritize internet facing systems and critical business systems.&#10;• Prioritize vulnerabilities listed in NIST or CISA’s Known Exploited Vulnerabilities catalog.
+                           &#10;• Patch operating systems, browsers, VPNs, firewalls, and endpoint management software quickly.
+                           
+                           &#10;• Remove unsupported or unused software.&#10;• Verify that patches were successfully installed.&#10;• Track unresolved vulnerabilities until they are fixed or formally accepted as risk." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame x:Name="AvEdrSection" Padding="15" IsVisible="False">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Antivirus and EDR"
+                           FontSize="22" FontAttributes="Bold" />
+
+                    <Label Text="Antivirus (AV) and Endpoint Detection and Response tools (EDR) help protect devices from malware and suspicious activity. 
+                           Traditional antivirus focuses on detecting and blocking known malicious files. EDR adds extra monitoring, investigation, and response capabilities." />
+
+                    <Label Text="EDR can help detect suspicious processes, malicious scripts, credential theft behavior, ransomware activity, commandand control communication, and other signs that an attacker is active on a device." />
+
+                    <Label Text="Endpoint protection alone is not enough and works best when combined with patching, least privilege plicies, attack surface reduction, user training, and centralized alert reviews." />
+
+                    <Label Text="Key Points"
+                           FontAttributes="Bold" />
+
+                    <Label Text="• Antivirus helps block known malware.&#10;• EDR helps detect and investigate suspicious endpoint behavior.
+                           &#10;• Alerts should be reviewed frequently and never  ignored.&#10;• Endpoint tools are strongest when devices are fully managed and reporting." />
+
+                    <Label Text="Recommended Actions / Settings" FontAttributes="Bold" />
+
+                    <Label Text="• Make sure all endpoints are onboarded or registered and reporting to the security tools.&#10;• Enable real-time protection.
+                           &#10;• Enable cloud delivered protection and updates if available.&#10;• Keep antivirus definitions and EDR sensors updated.&#10;• Review high-severity alerts quickly.&#10;• Reduce the available attack surface buth policies and rules when possible.&#10;• Investigate alerts. Do not dismissing them without review.&#10;• Confirm that tamper protection is enabled if the platform supports it." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Grid ColumnDefinitions="*,*,*" ColumnSpacing="8">
+                <Button Grid.Column="0"   Text="MDM" Clicked="BtnMdm_Clicked" />
+
+                <Button Grid.Column="1"
+                Text="Vuln Mgmt"   Clicked="BtnVulnMgmt_Clicked" />
+
+                <Button Grid.Column="2"  Text="AV / EDR"  Clicked="BtnAvEdr_Clicked" />
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

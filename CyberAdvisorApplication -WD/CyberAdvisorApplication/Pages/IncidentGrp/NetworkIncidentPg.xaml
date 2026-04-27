@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CyberAdvisorApplication.Pages.IncidentGrp.NetworkIncidentPg"
+             Title="Network Incident">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <VerticalStackLayout Spacing="6">
+                <Label Text="Incident Response"
+                       FontSize="28"
+                       FontAttributes="Bold" />
+                <Label Text="Step-by-step response procedures for security incidents" />
+            </VerticalStackLayout>
+
+            <BoxView HeightRequest="1" />
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Network Response"
+                           FontSize="22"
+                           FontAttributes="Bold" />
+                    <Label Text="Response procedures for network-based attacks including DDoS, intrusions, and unauthorized access." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Progress" />
+                    <Label Text="0 of 15 steps completed (0%)" />
+                    <ProgressBar Progress="0.0" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Padding="15">
+                <HorizontalStackLayout Spacing="12">
+                    <CheckBox />
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="1. Detect and verify the incident"
+                               FontAttributes="Bold" />
+                        <Label Text="Confirm the network anomaly through IDS/IPS alerts, firewall logs, and network monitoring tools. Distinguish between attack and legitimate traffic spikes." />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Frame Padding="15">
+                <HorizontalStackLayout Spacing="12">
+                    <CheckBox />
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="2. Classify the attack type"
+                               FontAttributes="Bold" />
+                        <Label Text="Identify if it's DDoS, port scanning, unauthorized access, or data exfiltration. Document attack patterns and indicators." />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Frame Padding="15">
+                <HorizontalStackLayout Spacing="12">
+                    <CheckBox />
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="3. Activate incident response team"
+                               FontAttributes="Bold" />
+                        <Label Text="." />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
